@@ -85,7 +85,7 @@ export default {
       this.$bvModal.show("modal");
     },
     resetModal() {
-      this.area = {};
+      this.ramo = {};
       this.submitted = false;
     },
     carregarListaAreas() {
@@ -117,7 +117,7 @@ export default {
       }
 
       this.$http
-        .post("/ramos", this.ramos)
+        .post("/ramos", this.ramo)
         .then(() => {
           this.carregarListaRamos();
           this.fecharModal();
